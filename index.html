@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        div.calculator-body {
+            margin-left: auto;
+            margin-right: auto;
+            background-color:gray;
+            width: 50%;
+            border-radius: 0.9em;
+            border-style:solid;
+            border-color: goldenrod;
+        }
+        div.calculator-screen {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+        }
+        input.content {
+            color:whitesmoke;
+            font-size: 3em;
+            width: 100%;
+            border-style:solid;
+            border-color:goldenrod;
+            border-radius: 5px;
+            background-color:black;
+            text-align: right;
+        }
+        div.calculator-keyboads {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 1.5em;
+            position: relative;
+            font-size: 0;
+        }
+        div.config, div.figure {
+            width: 75%;
+        }
+        div.calculator-keyboads button {
+            width: 29%;
+            margin: 2%;
+            color: white;
+            font-size: 14px;
+            border-style: solid;
+            border-color: goldenrod;
+            border-radius: 3px;
+            background-color: goldenrod;
+            outline-color: palegreen;
+        }
+        div.calculator-keyboads button:focus {
+            background-color: palegreen;
+            border-color: palegreen;
+        }
+        div.calculator-keyboads button.zero {
+            width: 62%;
+        }
+        div.symbol {
+            position: absolute;
+            top: 0%;
+            left: 75%;
+            width: 75%;
+        }
+        div.symbol button {
+            display: block;
+            width: 29%;
+            margin-bottom: 4%;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-body">
+        <div class="calculator-screen">
+            <input class="content" type="text" value="hahaha" readonly="readonly">
+        </div>
+        <div class="calculator-keyboads">
+            <div class="config">
+                <button>AC</button>
+                <button>+/-</button>
+                <button>%</button>
+            </div>
+            <div class="figure">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="zero">0</button>
+                <button>.</button>
+            </div>
+            <div class="symbol">
+                <button>+</button>
+                <button>-</button>
+                <button>x</button>
+                <button>/</button>
+                <button>=</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
