@@ -26,7 +26,7 @@
             margin-top: 1.5em;
             margin-bottom: 1.5em;
         }
-        input.content {
+        div.calculator-screen input.content {
             color:whitesmoke;
             font-size: 3em;
             width: 100%;
@@ -41,9 +41,19 @@
             margin-right: 10%;
             margin-bottom: 1.5em;
             position: relative;
-            font-size: 0;
+            font-size: 0;/*font-size 此处的设定是为了去除 inline-block 间的默认距离*/
+        }
+        div.calculator-keyboads button:focus {
+            background-color: palegreen;
+            border-color: palegreen;
         }
         div.config, div.figure {
+            width: 75%;
+        }
+        div.symbol {
+            position: absolute;
+            top: 0%;
+            left: 75%;
             width: 75%;
         }
         div.calculator-keyboads button {
@@ -57,18 +67,8 @@
             background-color: goldenrod;
             outline-color: palegreen;
         }
-        div.calculator-keyboads button:focus {
-            background-color: palegreen;
-            border-color: palegreen;
-        }
-        div.calculator-keyboads button.zero {
+        div.figure button.zero {
             width: 62%;
-        }
-        div.symbol {
-            position: absolute;
-            top: 0%;
-            left: 75%;
-            width: 75%;
         }
         div.symbol button {
             display: block;
@@ -110,5 +110,8 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        
+    </script>
 </body>
 </html>
