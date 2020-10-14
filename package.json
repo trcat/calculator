@@ -1,0 +1,25 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "用 HTML + CSS + Javascript 制作一个简单的计算器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trcat/calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trcat/calculator/issues"
+  },
+  "homepage": "https://github.com/trcat/calculator#readme",
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "delete": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
