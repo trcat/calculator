@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrap {
+  width: 375px;
+  height: 667px;
+  border: 1px solid;
+  padding: 5px;
+  background-color: #000000;
+}
