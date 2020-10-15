@@ -9,7 +9,7 @@ function clean(cb) {
 }
 
 function sassTask() {
-  return src("src/*.scss")
+  return src(["src/*.scss", "src/*.css"])
     .pipe(sass().on("error", sass.logError))
     .pipe(dest("dist"));
 }

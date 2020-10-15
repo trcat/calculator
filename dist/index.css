@@ -5,10 +5,27 @@ body {
   height: 100vh;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .wrap {
   width: 375px;
-  height: 667px;
   border: 1px solid;
-  padding: 5px;
+  padding: 100px 5px 5px 5px;
   background-color: #000000;
+}
+.wrap .screen {
+  font-size: 60px;
+  color: #fff;
+  direction: rtl;
+}
+.wrap .keybord .keybord-left .btn-group-sign button {
+  background-color: #a5a5a5;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
 }
