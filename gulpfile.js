@@ -1,6 +1,7 @@
 const { src, dest, series, watch } = require("gulp");
 const del = require("delete");
 const sass = require("gulp-sass");
+const babel = require("gulp-babel");
 
 sass.compiler = require("dart-sass");
 
@@ -14,8 +15,18 @@ function sassTask() {
     .pipe(dest("dist"));
 }
 
-const defaultTask = series(clean, sassTask);
+function jsTask() {
+  return src("src/*.js")
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"],
+      })
+    )
+    .pipe(dest("dist"));
+}
 
-watch(["src/*.scss"], defaultTask);
+const defaultTask = series(clean, sassTask, jsTask);
+
+watch(["src/*.scss", "src/*.js"], defaultTask);
 
 exports.default = defaultTask;
