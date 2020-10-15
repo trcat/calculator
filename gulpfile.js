@@ -6,7 +6,7 @@ const babel = require("gulp-babel");
 sass.compiler = require("dart-sass");
 
 function clean(cb) {
-  return del(["dist"], cb);
+  return del(["dist/*.css", "dist/*.js"], cb);
 }
 
 function sassTask() {

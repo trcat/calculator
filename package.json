@@ -28,5 +28,8 @@
   "broswerlist": [
     "> 1%",
     "last 2 version"
-  ]
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5"
+  }
 }

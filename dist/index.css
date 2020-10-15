@@ -33,6 +33,8 @@ button.round {
   direction: rtl;
   margin-bottom: 15px;
   padding-right: 30px;
+  line-height: 80px;
+  min-height: 80px;
 }
 .wrap .keybord .row {
   display: flex;
@@ -46,17 +48,17 @@ button.round {
 .wrap .keybord .row .btn-sign:active {
   background-color: #e9e5e5;
 }
-.wrap .keybord .row .btn-operator, .wrap .keybord .row .btn-number, .wrap .keybord .row .btn-number-zero {
+.wrap .keybord .row .btn-operator, .wrap .keybord .row .btn-number {
   background-color: #fd9300;
   color: #fff;
 }
-.wrap .keybord .row .btn-operator:active, .wrap .keybord .row .btn-number:active, .wrap .keybord .row .btn-number-zero:active {
+.wrap .keybord .row .btn-operator:active, .wrap .keybord .row .btn-number:active {
   background-color: #facb91;
 }
-.wrap .keybord .row .btn-number, .wrap .keybord .row .btn-number-zero {
+.wrap .keybord .row .btn-number {
   background-color: #353535;
 }
-.wrap .keybord .row .btn-number:active, .wrap .keybord .row .btn-number-zero:active {
+.wrap .keybord .row .btn-number:active {
   background-color: #898888;
 }
 .wrap .keybord .row .btn-number-zero {
