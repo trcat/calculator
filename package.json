@@ -19,15 +19,20 @@
   "devDependencies": {
     "@babel/core": "^7.12.0",
     "@babel/preset-env": "^7.12.0",
+    "autoprefixer": "^10.0.1",
+    "cssnano": "^4.1.10",
     "dart-sass": "^1.25.0",
     "delete": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "postcss": "^8.1.1"
   },
-  "broswerlist": [
+  "browserslist": [
+    "last 2 versions",
     "> 1%",
-    "last 2 version"
+    "ie >= 9"
   ],
   "dependencies": {
     "@babel/polyfill": "^7.11.5"
