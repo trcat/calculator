@@ -159,6 +159,7 @@ var Calculator = /*#__PURE__*/function () {
         item.onclick = function () {
           if (text !== '=') {
             if (_this3.cache.length > 0) {
+              // 如果是多次按运算符的话, 需要写计算出上一次的值并显示在屏幕上
               _this3.cache.push(_this3.screen.innerText);
 
               _this3.setScreen(_this3.calculate());
@@ -173,6 +174,7 @@ var Calculator = /*#__PURE__*/function () {
             _this3.operatorJustClick = true;
           } else {
             if (_this3.operatorJustClick) {
+              // 如果上一次就是按了运算符, 那么屏幕不变, 清空 cache
               _this3.clearOperatorState();
 
               _this3.cache = [];

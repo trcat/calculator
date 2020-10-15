@@ -111,6 +111,7 @@ class Calculator {
       item.onclick = () => {
         if (text !== '=') {
           if (this.cache.length > 0) {
+            // 如果是多次按运算符的话, 需要写计算出上一次的值并显示在屏幕上
             this.cache.push(this.screen.innerText);
             this.setScreen(this.calculate());
           }
@@ -120,6 +121,7 @@ class Calculator {
           this.operatorJustClick = true;
         } else {
           if (this.operatorJustClick) {
+            // 如果上一次就是按了运算符, 那么屏幕不变, 清空 cache
             this.clearOperatorState();
             this.cache = [];
           } else {
