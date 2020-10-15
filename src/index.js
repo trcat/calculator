@@ -97,7 +97,12 @@ class Calculator {
     this.sign.forEach((item) => {
       switch (item.innerText) {
         case "C":
-          item.onclick = () => this.clearScreen();
+          item.onclick = () => {
+            this.clearScreen();
+            this.cache = [];
+            this.operatorJustClick = false;
+            this.clearOperatorState();
+          };
           break;
       }
     });

@@ -137,7 +137,12 @@ var Calculator = /*#__PURE__*/function () {
         switch (item.innerText) {
           case "C":
             item.onclick = function () {
-              return _this2.clearScreen();
+              _this2.clearScreen();
+
+              _this2.cache = [];
+              _this2.operatorJustClick = false;
+
+              _this2.clearOperatorState();
             };
 
             break;
