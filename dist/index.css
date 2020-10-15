@@ -9,6 +9,15 @@ button {
   border: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button.round {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
 
 .wrap {
@@ -22,10 +31,35 @@ button {
   color: #fff;
   direction: rtl;
 }
-.wrap .keybord .keybord-left .btn-group-sign button {
+.wrap .keybord .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.wrap .keybord .row .btn-sign {
   background-color: #a5a5a5;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50%;
+}
+.wrap .keybord .row .btn-sign:active {
+  background-color: #e9e5e5;
+}
+.wrap .keybord .row .btn-operator, .wrap .keybord .row .btn-number, .wrap .keybord .row .btn-number-zero {
+  background-color: #fd9300;
+  color: #fff;
+}
+.wrap .keybord .row .btn-operator:active, .wrap .keybord .row .btn-number:active, .wrap .keybord .row .btn-number-zero:active {
+  background-color: #facb91;
+}
+.wrap .keybord .row .btn-number, .wrap .keybord .row .btn-number-zero {
+  background-color: #353535;
+}
+.wrap .keybord .row .btn-number:active, .wrap .keybord .row .btn-number-zero:active {
+  background-color: #898888;
+}
+.wrap .keybord .row .btn-number-zero {
+  width: 170px;
+  height: 80px;
+  border-radius: 45px;
+  text-align: left;
+  padding-left: 30px;
 }

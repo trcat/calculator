@@ -1,3 +1,5 @@
+$btnRoundSize: 80px;
+
 body {
   display: flex;
   justify-content: center;
@@ -9,7 +11,17 @@ button {
   border: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  &.round {
+    border-radius: 50%;
+    width: $btnRoundSize;
+    height: $btnRoundSize;
+  }
 }
+
 
 .wrap {
   width: 375px;
@@ -22,15 +34,38 @@ button {
     direction: rtl;
   }
   .keybord {
-    .keybord-left {
-      .btn-group-sign {
-        button {
-          background-color: #a5a5a5;
-          width: 50px;
-          height: 50px;
-          text-align: center;
-          border-radius: 50%;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      .btn-sign {
+        background-color: #a5a5a5;
+        &:active {
+          background-color: #e9e5e5;
         }
+      }
+      .btn-operator {
+        background-color: #fd9300;
+        color: #fff;
+        &:active {
+          background-color: #facb91;
+        }
+      }
+      .btn-number {
+        @extend .btn-operator;
+        background-color: #353535;
+        &:active {
+          background-color: #898888;
+        }
+      }
+      .btn-number-zero {
+        @extend .btn-number;
+        width: 170px;
+        height: $btnRoundSize;
+        border-radius: 45px;
+        text-align: left;
+        padding-left: 30px;
       }
     }
   }
