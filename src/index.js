@@ -84,7 +84,10 @@ class Calculator {
    */
   bindNumberHandles() {
     this.numbers.forEach((item) => {
-      item.onclick = () => this.appendScreen(item.innerText);
+      item.onclick = () => {
+        this.clearOperatorState();
+        this.appendScreen(item.innerText);
+      }
     });
   }
   /**
@@ -106,16 +109,24 @@ class Calculator {
     this.operator.forEach((item) => {
       const text = item.innerText;
       item.onclick = () => {
-        this.clearOperatorState();
         if (text !== '=') {
+          if (this.cache.length > 0) {
+            this.cache.push(this.screen.innerText);
+            this.setScreen(this.calculate());
+          }
           item.classList.add("active");
           this.cache.push(this.screen.innerText);
           this.cache.push(text);
           this.operatorJustClick = true;
         } else {
-          this.cache.push(this.screen.innerText);
-          this.setScreen(this.calculate());
-          this.operatorJustClick = true;
+          if (this.operatorJustClick) {
+            this.clearOperatorState();
+            this.cache = [];
+          } else {
+            this.cache.push(this.screen.innerText);
+            this.setScreen(this.calculate());
+            this.operatorJustClick = true;
+          }
         }
       }
     });

@@ -118,7 +118,9 @@ var Calculator = /*#__PURE__*/function () {
 
       this.numbers.forEach(function (item) {
         item.onclick = function () {
-          return _this.appendScreen(item.innerText);
+          _this.clearOperatorState();
+
+          _this.appendScreen(item.innerText);
         };
       });
     }
@@ -155,9 +157,13 @@ var Calculator = /*#__PURE__*/function () {
         var text = item.innerText;
 
         item.onclick = function () {
-          _this3.clearOperatorState();
-
           if (text !== '=') {
+            if (_this3.cache.length > 0) {
+              _this3.cache.push(_this3.screen.innerText);
+
+              _this3.setScreen(_this3.calculate());
+            }
+
             item.classList.add("active");
 
             _this3.cache.push(_this3.screen.innerText);
@@ -166,11 +172,17 @@ var Calculator = /*#__PURE__*/function () {
 
             _this3.operatorJustClick = true;
           } else {
-            _this3.cache.push(_this3.screen.innerText);
+            if (_this3.operatorJustClick) {
+              _this3.clearOperatorState();
 
-            _this3.setScreen(_this3.calculate());
+              _this3.cache = [];
+            } else {
+              _this3.cache.push(_this3.screen.innerText);
 
-            _this3.operatorJustClick = true;
+              _this3.setScreen(_this3.calculate());
+
+              _this3.operatorJustClick = true;
+            }
           }
         };
       });
