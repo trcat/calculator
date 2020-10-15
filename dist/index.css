@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: flex;
   justify-content: center;
@@ -19,6 +20,19 @@ button.round {
   border-radius: 50%;
   width: 80px;
   height: 80px;
+}
+button:disabled {
+  cursor: not-allowed;
+  background-color: #000000 !important;
+  color: #000000 !important;
+}
+button:disabled::before {
+  content: "开发中";
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+  position: relative;
+  width: 80px;
 }
 
 .wrap {

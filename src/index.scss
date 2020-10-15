@@ -21,6 +21,19 @@ button {
     width: $btnRoundSize;
     height: $btnRoundSize;
   }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #000000!important;
+    color: #000000!important;
+    &::before {
+      content: "开发中";
+      color: #fff;
+      font-size: 12px;
+      display: inline-block;
+      position: relative;
+      width: $btnRoundSize;
+    }
+  }
 }
 
 .wrap {
