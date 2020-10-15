@@ -52,7 +52,7 @@ button {
       .btn-operator {
         background-color: #fd9300;
         color: #fff;
-        &:active {
+        &:active, &.active {
           background-color: #facb91;
         }
       }

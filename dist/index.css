@@ -52,7 +52,7 @@ button.round {
   background-color: #fd9300;
   color: #fff;
 }
-.wrap .keybord .row .btn-operator:active, .wrap .keybord .row .btn-number:active {
+.wrap .keybord .row .btn-operator:active, .wrap .keybord .row .btn-number:active, .wrap .keybord .row .btn-operator.active, .wrap .keybord .row .active.btn-number {
   background-color: #facb91;
 }
 .wrap .keybord .row .btn-number {
