@@ -7,6 +7,7 @@ body {
 
 button {
   border: none;
+  outline: none;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -23,19 +24,21 @@ button.round {
 .wrap {
   width: 375px;
   border: 1px solid;
-  padding: 100px 5px 5px 5px;
+  padding: 100px 5px 0 5px;
   background-color: #000000;
 }
 .wrap .screen {
-  font-size: 60px;
+  font-size: 70px;
   color: #fff;
   direction: rtl;
+  margin-bottom: 15px;
+  padding-right: 30px;
 }
 .wrap .keybord .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .wrap .keybord .row .btn-sign {
   background-color: #a5a5a5;
