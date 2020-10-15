@@ -170,8 +170,6 @@ var Calculator = /*#__PURE__*/function () {
             _this3.cache.push(_this3.screen.innerText);
 
             _this3.cache.push(text);
-
-            _this3.operatorJustClick = true;
           } else {
             if (_this3.operatorJustClick) {
               // 如果上一次就是按了运算符, 那么屏幕不变, 清空 cache
@@ -182,9 +180,9 @@ var Calculator = /*#__PURE__*/function () {
               _this3.cache.push(_this3.screen.innerText);
 
               _this3.setScreen(_this3.calculate());
-
-              _this3.operatorJustClick = true;
             }
+
+            _this3.operatorJustClick = true;
           }
         };
       });

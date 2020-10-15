@@ -118,7 +118,6 @@ class Calculator {
           item.classList.add("active");
           this.cache.push(this.screen.innerText);
           this.cache.push(text);
-          this.operatorJustClick = true;
         } else {
           if (this.operatorJustClick) {
             // 如果上一次就是按了运算符, 那么屏幕不变, 清空 cache
@@ -127,8 +126,8 @@ class Calculator {
           } else {
             this.cache.push(this.screen.innerText);
             this.setScreen(this.calculate());
-            this.operatorJustClick = true;
           }
+          this.operatorJustClick = true;
         }
       }
     });
