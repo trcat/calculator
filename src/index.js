@@ -128,6 +128,10 @@ class Calculator {
       item.classList.remove('active');
     })
   }
+  /**
+   * 更具 cache 开始计算最终的结果
+   * @return {number}
+   */
   calculate() {
     let total;
     this.cache.forEach((item, index) => {

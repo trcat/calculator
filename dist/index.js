@@ -186,6 +186,11 @@ var Calculator = /*#__PURE__*/function () {
         item.classList.remove('active');
       });
     }
+    /**
+     * 更具 cache 开始计算最终的结果
+     * @return {number}
+     */
+
   }, {
     key: "calculate",
     value: function calculate() {
